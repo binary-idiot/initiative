@@ -1,4 +1,4 @@
-# 5e Initiative Tracker
+# Initiative
 Mobile friendly initiative tracker for 5th edition dungeons and dragons
 
 Project is intended to be a mobile friendly initiative tracker web app.
