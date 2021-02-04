@@ -17,6 +17,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-
+<style lang="scss">
+ .monster-list{
+   ul{
+     list-style: none;
+     padding: 0;
+   }
+ }
 </style>
