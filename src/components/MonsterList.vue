@@ -1,18 +1,18 @@
 <template>
   <div class="monster-list">
     <ul>
-        <li v-for="monster in $options.monsters" :key="monster.name">{{ monster.name }}</li>
+        <li v-for="monster in monsters" :key="monster.name">{{ monster.name }}</li>
     </ul>
   </div>
 </template>
 
 <script>
-import MonsterData from '@/data/monsters/srd.json';
 
 export default {
   name: 'MonsterList',
-  monsters: MonsterData.monster,
-
+  props: {
+    monsters: Array,
+  },
 };
 </script>
 
