@@ -1,0 +1,8 @@
+{
+    "monsters": [
+        "./data/monsters/srd.json"
+    ],
+    "spells": [
+        "./data/spells/srd.json"
+    ]
+}
