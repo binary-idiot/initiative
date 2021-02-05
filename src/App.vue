@@ -68,6 +68,7 @@ export default {
 
 	main{
 		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas:
 			'monster-list monster-details monster-details';
 	}
