@@ -14,4 +14,7 @@ module.exports = {
 			exclude: ['CNAME']
 		}
 	},
+	css: {
+		sourceMap: true,
+	},
 };

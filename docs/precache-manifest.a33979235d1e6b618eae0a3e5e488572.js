@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b91a54d368472d4d82d8",
-    "url": "/css/app.e8a8c661.css"
+    "revision": "6a0146d17fb99c2c9ed7",
+    "url": "/css/app.a28c93a8.css"
   },
   {
-    "revision": "b91a54d368472d4d82d8",
-    "url": "/css/app.e8a8c661.css.map"
+    "revision": "6a0146d17fb99c2c9ed7",
+    "url": "/css/app.a28c93a8.css.map"
   },
   {
     "revision": "9d5f2a9bbaae65b895a0799b16478112",
@@ -44,15 +44,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/icons/favicon-32x32.png"
   },
   {
-    "revision": "2786a6201f8f7416aae0f012cd5d98b7",
+    "revision": "51f2d348c46d35fa46d826ce8f5b31ff",
     "url": "/index.html"
   },
   {
-    "revision": "b91a54d368472d4d82d8",
+    "revision": "6a0146d17fb99c2c9ed7",
     "url": "/js/app.355ded9f.js"
   },
   {
-    "revision": "b91a54d368472d4d82d8",
+    "revision": "6a0146d17fb99c2c9ed7",
     "url": "/js/app.355ded9f.js.map"
   },
   {
