@@ -1,0 +1,15 @@
+@dc
+@dice
+@atk
+@hit
+@h
+@damage
+@condition
+@skill
+@spell
+@recharge
+@recharge}",
+@creature
+@item
+@chance
+@i

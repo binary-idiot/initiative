@@ -1,0 +1,17 @@
+@damage
+@dice
+@condition
+@creature
+@hit
+@spell
+@sense
+@scaledamage
+@scaledice
+@filter
+@skill
+@action
+@note
+@book
+@item
+@race
+@chance
