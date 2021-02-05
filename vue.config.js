@@ -10,5 +10,8 @@ module.exports = {
 			favicon16: 'img/icons/favicon-16x16.png',
 			favicon32: 'img/icons/favicon-32x32.png',
 		},
+		workboxOptions: {
+			exclude: ['CNAME']
+		}
 	},
 };
