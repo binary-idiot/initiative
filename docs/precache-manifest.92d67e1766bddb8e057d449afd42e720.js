@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CNAME"
   },
   {
-    "revision": "741abc5858c5ff142a33",
-    "url": "/css/app.d239e347.css"
+    "revision": "b91a54d368472d4d82d8",
+    "url": "/css/app.e8a8c661.css"
   },
   {
     "revision": "9d5f2a9bbaae65b895a0799b16478112",
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/data/spells/srd.json"
   },
   {
-    "revision": "9c8bb32c66ef30d90f6138d895ffc7fd",
+    "revision": "2786a6201f8f7416aae0f012cd5d98b7",
     "url": "/index.html"
   },
   {
-    "revision": "741abc5858c5ff142a33",
-    "url": "/js/app.2a5e8ef6.js"
+    "revision": "b91a54d368472d4d82d8",
+    "url": "/js/app.355ded9f.js"
   },
   {
-    "revision": "3d7730c2023a51df29f2",
-    "url": "/js/chunk-vendors.a4ed62da.js"
+    "revision": "9732defa6ccb8d1f0e60",
+    "url": "/js/chunk-vendors.5701fbc6.js"
   },
   {
     "revision": "09b0303bff60da46ce15a1d210ef3312",
