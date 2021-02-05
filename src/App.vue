@@ -2,22 +2,22 @@
 	<header>
 		<h1>Initiative</h1>
 	</header>
+
 	<main>
 		<MonsterList @change-selected-monster="selectedMonster = $event"></MonsterList>
-		<div class="monster-details">
-			<h2 v-if="selectedMonster">{{ selectedMonster.name }}</h2>
-		</div>
+		<MonsterDetails :monster="selectedMonster"></MonsterDetails>
 	</main>
 </template>
 
 <script>
-
+import MonsterDetails from './components/MonsterDetails.vue';
 import MonsterList from './components/MonsterList.vue';
 
 export default {
 	name: 'App',
 	components: {
 		MonsterList,
+		MonsterDetails,
 	},
 
 	data() {
@@ -71,10 +71,6 @@ export default {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas:
 			'monster-list monster-details monster-details';
-	}
-
-	.monster-details{
-		grid-area: monster-details;
 	}
 }
 </style>
