@@ -1,0 +1,14 @@
+@dc - "dc {dc}" - DC: {dc}
+@dice - "dice {num}d{sides} [+ {mod}]" -<strong>{num}d{sides}(aveRoll) [+ {mod}]</strong>
+@atk - "atk {type}[, {type}]" - <em>{typeFull}[or {typeFull}]</em>
+@hit - "hit {num} - +{num}
+@h - - <em>Hit:</em> 
+@damage - "damage {num}d{sides} [+ {mod}]" -<strong>{num}d{sides}(aveRoll) [+ {mod}]</strong>
+@condition - "condition {condition} - condition
+@skill - "skill {skill}" - {skill}
+@spell - "spell {spell}" - <a href="{urlToSpell}>{spell}</a>
+@recharge - "recharge[ {num}]" - <strong>(Recharge [{num}-]6)</strong>
+@creature - "creature {creature}" - <a href="{urlToCreature}>{creature}</a>
+@item - "item {item}|{source}" - <em>{item}</em>
+@chance - "chance {num}|{text}|{fulltext}" - {text}
+@i - "i text" - <em>{text}</em> 

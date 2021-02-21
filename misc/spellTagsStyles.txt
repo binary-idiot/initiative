@@ -1,0 +1,17 @@
+@damage - "damage {num}d{sides} [+ {mod}]" -<strong>{num}d{sides}(aveRoll) [+ {mod}]</strong>
+@dice - "dice {num}d{sides} [+ {mod}]" -<strong>{num}d{sides}(aveRoll) [+ {mod}]</strong>
+@condition - "condition {condition} - condition
+@creature - "creature {creature}" - <a href="{urlToCreature}>{creature}</a>
+@hit - "hit {num} - +{num}
+@spell - "spell {spell}" - <a href="{urlToSpell}>{spell}</a>
+@sense - "sense {sense}" - {sense}
+@scaledamage - "scaledamage {start}|{range}|{increase}" - {parseDice}
+@scaledice - "scaledice {start}|{range}|{increase}" - {parseDice}
+@filter - "filter {text}|{component}|{type}|{tag} - <em>{text}</em>
+@skill - "skill {skill}" - {skill}
+@action - "action {action}" - {action}
+@note - "note {text}" - 
+@book - "book {text}|{book}|{page}|{item} - {text}
+@item - "item {item}|{source}" - <i>{item}</i>
+@race - "race {text}||{options}" - {race}
+@chance - "chance {num}|{text}|{fulltext}" - {text}
