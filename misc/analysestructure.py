@@ -40,9 +40,13 @@ def analyseField(field, parent):
 
     else:
         fieldType = type(field).__name__
-        item = parent.get(fieldType)
+        fieldKey = fieldType
+        if fieldType == 'str' and field.find('@', 0) != -1:
+            fieldKey = 'tagStr'
+
+        item = parent.get(fieldKey)
         if(item == None):
-            parent.update({fieldType: fieldType})
+            parent.update({fieldKey: fieldType})
             return parent
         else:
             return None

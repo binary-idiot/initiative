@@ -55,7 +55,8 @@
             },
             "from": {
                 "array": {
-                    "str": "str"
+                    "str": "str",
+                    "tagStr": "str"
                 }
             },
             "int": "int",
@@ -227,7 +228,8 @@
             },
             "entries": {
                 "array": {
-                    "str": "str"
+                    "str": "str",
+                    "tagStr": "str"
                 }
             }
         }
@@ -239,7 +241,8 @@
             },
             "entries": {
                 "array": {
-                    "str": "str"
+                    "str": "str",
+                    "tagStr": "str"
                 }
             }
         }
@@ -251,6 +254,7 @@
             },
             "entries": {
                 "array": {
+                    "tagStr": "str",
                     "str": "str"
                 }
             }
@@ -327,6 +331,7 @@
             },
             "headerEntries": {
                 "array": {
+                    "tagStr": "str",
                     "str": "str"
                 }
             },
@@ -334,7 +339,7 @@
                 "0": {
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -344,7 +349,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -354,7 +359,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -364,7 +369,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -374,7 +379,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -384,7 +389,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -394,7 +399,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -404,7 +409,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -414,7 +419,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 },
@@ -424,7 +429,7 @@
                     },
                     "spells": {
                         "array": {
-                            "str": "str"
+                            "tagStr": "str"
                         }
                     }
                 }
@@ -434,7 +439,7 @@
             },
             "will": {
                 "array": {
-                    "str": "str"
+                    "tagStr": "str"
                 }
             },
             "hidden": {
@@ -450,22 +455,22 @@
             "daily": {
                 "3e": {
                     "array": {
-                        "str": "str"
+                        "tagStr": "str"
                     }
                 },
                 "1e": {
                     "array": {
-                        "str": "str"
+                        "tagStr": "str"
                     }
                 },
                 "1": {
                     "array": {
-                        "str": "str"
+                        "tagStr": "str"
                     }
                 },
                 "2e": {
                     "array": {
-                        "str": "str"
+                        "tagStr": "str"
                     }
                 }
             }
@@ -537,6 +542,7 @@
             },
             "entries": {
                 "array": {
+                    "tagStr": "str",
                     "str": "str"
                 }
             },
@@ -586,7 +592,8 @@
             },
             "entries": {
                 "array": {
-                    "str": "str"
+                    "str": "str",
+                    "tagStr": "str"
                 }
             }
         }
