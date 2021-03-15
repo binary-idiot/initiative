@@ -14,7 +14,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .creature-list-item{
 	padding: 5px;
 	border: 1px solid black;
