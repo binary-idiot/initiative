@@ -1,0 +1,270 @@
+{
+    "name": {
+        "str": "str"
+    },
+    "source": {
+        "str": "str"
+    },
+    "page": {
+        "int": "int"
+    },
+    "srd": {
+        "bool": "bool"
+    },
+    "level": {
+        "int": "int"
+    },
+    "school": {
+        "str": "str"
+    },
+    "time": {
+        "array": {
+            "number": {
+                "int": "int"
+            },
+            "unit": {
+                "str": "str"
+            },
+            "condition": {
+                "str": "str"
+            }
+        }
+    },
+    "range": {
+        "type": {
+            "str": "str"
+        },
+        "distance": {
+            "type": {
+                "str": "str"
+            },
+            "amount": {
+                "int": "int"
+            }
+        }
+    },
+    "components": {
+        "v": {
+            "bool": "bool"
+        },
+        "s": {
+            "bool": "bool"
+        },
+        "m": {
+            "str": "str",
+            "text": {
+                "str": "str"
+            },
+            "cost": {
+                "int": "int"
+            },
+            "consume": {
+                "bool": "bool"
+            }
+        }
+    },
+    "duration": {
+        "array": {
+            "type": {
+                "str": "str"
+            },
+            "duration": {
+                "type": {
+                    "str": "str"
+                },
+                "amount": {
+                    "int": "int"
+                },
+                "upTo": {
+                    "bool": "bool"
+                }
+            },
+            "concentration": {
+                "bool": "bool"
+            },
+            "ends": {
+                "array": {
+                    "str": "str"
+                }
+            }
+        }
+    },
+    "entries": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "scalingLevelDice": {
+        "label": {
+            "str": "str"
+        },
+        "scaling": {
+            "1": {
+                "str": "str"
+            },
+            "5": {
+                "str": "str"
+            },
+            "11": {
+                "str": "str"
+            },
+            "17": {
+                "str": "str"
+            }
+        }
+    },
+    "damageInflict": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "savingThrow": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "miscTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "areaTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "classes": {
+        "fromClassList": {
+            "array": {
+                "name": {
+                    "str": "str"
+                },
+                "source": {
+                    "str": "str"
+                }
+            }
+        },
+        "fromClassListVariant": {
+            "array": {
+                "name": {
+                    "str": "str"
+                },
+                "source": {
+                    "str": "str"
+                },
+                "definedInSource": {
+                    "str": "str"
+                }
+            }
+        },
+        "fromSubclass": {
+            "array": {
+                "class": {
+                    "name": {
+                        "str": "str"
+                    },
+                    "source": {
+                        "str": "str"
+                    }
+                },
+                "subclass": {
+                    "name": {
+                        "str": "str"
+                    },
+                    "source": {
+                        "str": "str"
+                    },
+                    "subSubclass": {
+                        "str": "str"
+                    }
+                }
+            }
+        }
+    },
+    "backgrounds": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "source": {
+                "str": "str"
+            }
+        }
+    },
+    "entriesHigherLevel": {
+        "array": {
+            "type": {
+                "str": "str"
+            },
+            "name": {
+                "str": "str"
+            },
+            "entries": {
+                "array": {
+                    "str": "str"
+                }
+            }
+        }
+    },
+    "races": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "source": {
+                "str": "str"
+            },
+            "baseName": {
+                "str": "str"
+            },
+            "baseSource": {
+                "str": "str"
+            }
+        }
+    },
+    "meta": {
+        "ritual": {
+            "bool": "bool"
+        }
+    },
+    "eldritchInvocations": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "source": {
+                "str": "str"
+            }
+        }
+    },
+    "conditionInflict": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "spellAttack": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "abilityCheck": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "damageResist": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "damageVulnerable": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "damageImmune": {
+        "array": {
+            "str": "str"
+        }
+    }
+}

@@ -1,0 +1,597 @@
+{
+    "name": {
+        "str": "str"
+    },
+    "source": {
+        "str": "str"
+    },
+    "page": {
+        "int": "int"
+    },
+    "srd": {
+        "bool": "bool"
+    },
+    "otherSources": {
+        "array": {
+            "source": {
+                "str": "str"
+            }
+        }
+    },
+    "size": {
+        "str": "str"
+    },
+    "type": {
+        "str": "str",
+        "type": {
+            "str": "str"
+        },
+        "tags": {
+            "array": {
+                "str": "str"
+            }
+        },
+        "swarmSize": {
+            "str": "str"
+        }
+    },
+    "alignment": {
+        "array": {
+            "str": "str",
+            "alignment": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "chance": {
+                "int": "int"
+            }
+        }
+    },
+    "ac": {
+        "array": {
+            "ac": {
+                "int": "int"
+            },
+            "from": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "int": "int",
+            "condition": {
+                "str": "str"
+            }
+        }
+    },
+    "hp": {
+        "average": {
+            "int": "int"
+        },
+        "formula": {
+            "str": "str"
+        }
+    },
+    "speed": {
+        "walk": {
+            "int": "int",
+            "number": {
+                "int": "int"
+            },
+            "condition": {
+                "str": "str"
+            }
+        },
+        "swim": {
+            "int": "int"
+        },
+        "fly": {
+            "int": "int",
+            "number": {
+                "int": "int"
+            },
+            "condition": {
+                "str": "str"
+            }
+        },
+        "burrow": {
+            "int": "int"
+        },
+        "climb": {
+            "int": "int"
+        },
+        "canHover": {
+            "bool": "bool"
+        }
+    },
+    "str": {
+        "int": "int"
+    },
+    "dex": {
+        "int": "int"
+    },
+    "con": {
+        "int": "int"
+    },
+    "int": {
+        "int": "int"
+    },
+    "wis": {
+        "int": "int"
+    },
+    "cha": {
+        "int": "int"
+    },
+    "save": {
+        "con": {
+            "str": "str"
+        },
+        "int": {
+            "str": "str"
+        },
+        "wis": {
+            "str": "str"
+        },
+        "dex": {
+            "str": "str"
+        },
+        "cha": {
+            "str": "str"
+        },
+        "str": {
+            "str": "str"
+        }
+    },
+    "skill": {
+        "history": {
+            "str": "str"
+        },
+        "perception": {
+            "str": "str"
+        },
+        "medicine": {
+            "str": "str"
+        },
+        "religion": {
+            "str": "str"
+        },
+        "stealth": {
+            "str": "str"
+        },
+        "persuasion": {
+            "str": "str"
+        },
+        "insight": {
+            "str": "str"
+        },
+        "deception": {
+            "str": "str"
+        },
+        "arcana": {
+            "str": "str"
+        },
+        "athletics": {
+            "str": "str"
+        },
+        "acrobatics": {
+            "str": "str"
+        },
+        "survival": {
+            "str": "str"
+        },
+        "nature": {
+            "str": "str"
+        },
+        "intimidation": {
+            "str": "str"
+        },
+        "performance": {
+            "str": "str"
+        },
+        "investigation": {
+            "str": "str"
+        },
+        "sleight of hand": {
+            "str": "str"
+        }
+    },
+    "senses": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "passive": {
+        "int": "int"
+    },
+    "languages": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "cr": {
+        "str": "str",
+        "cr": {
+            "str": "str"
+        },
+        "coven": {
+            "str": "str"
+        },
+        "lair": {
+            "str": "str"
+        }
+    },
+    "trait": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "entries": {
+                "array": {
+                    "str": "str"
+                }
+            }
+        }
+    },
+    "action": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "entries": {
+                "array": {
+                    "str": "str"
+                }
+            }
+        }
+    },
+    "legendary": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "entries": {
+                "array": {
+                    "str": "str"
+                }
+            }
+        }
+    },
+    "legendaryGroup": {
+        "name": {
+            "str": "str"
+        },
+        "source": {
+            "str": "str"
+        }
+    },
+    "environment": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "hasToken": {
+        "bool": "bool"
+    },
+    "soundClip": {
+        "type": {
+            "str": "str"
+        },
+        "path": {
+            "str": "str"
+        }
+    },
+    "traitTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "senseTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "actionTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "languageTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "damageTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "miscTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "conditionInflict": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "conditionInflictLegendary": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "spellcasting": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "headerEntries": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "spells": {
+                "0": {
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "1": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "2": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "3": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "4": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "5": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "6": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "7": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "8": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                },
+                "9": {
+                    "slots": {
+                        "int": "int"
+                    },
+                    "spells": {
+                        "array": {
+                            "str": "str"
+                        }
+                    }
+                }
+            },
+            "ability": {
+                "str": "str"
+            },
+            "will": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "hidden": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "footerEntries": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "daily": {
+                "3e": {
+                    "array": {
+                        "str": "str"
+                    }
+                },
+                "1e": {
+                    "array": {
+                        "str": "str"
+                    }
+                },
+                "1": {
+                    "array": {
+                        "str": "str"
+                    }
+                },
+                "2e": {
+                    "array": {
+                        "str": "str"
+                    }
+                }
+            }
+        }
+    },
+    "spellcastingTags": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "group": {
+        "str": "str"
+    },
+    "immune": {
+        "array": {
+            "str": "str",
+            "immune": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "note": {
+                "str": "str"
+            },
+            "cond": {
+                "bool": "bool"
+            }
+        }
+    },
+    "dragonCastingColor": {
+        "str": "str"
+    },
+    "conditionImmune": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "resist": {
+        "array": {
+            "str": "str",
+            "special": {
+                "str": "str"
+            },
+            "resist": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "note": {
+                "str": "str"
+            },
+            "cond": {
+                "bool": "bool"
+            }
+        }
+    },
+    "conditionInflictSpell": {
+        "array": {
+            "str": "str"
+        }
+    },
+    "variant": {
+        "array": {
+            "type": {
+                "str": "str"
+            },
+            "name": {
+                "str": "str"
+            },
+            "entries": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "variantSource": {
+                "source": {
+                    "str": "str"
+                },
+                "page": {
+                    "int": "int"
+                }
+            }
+        }
+    },
+    "altArt": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "source": {
+                "str": "str"
+            },
+            "page": {
+                "int": "int"
+            }
+        }
+    },
+    "vulnerable": {
+        "array": {
+            "str": "str",
+            "vulnerable": {
+                "array": {
+                    "str": "str"
+                }
+            },
+            "note": {
+                "str": "str"
+            },
+            "cond": {
+                "bool": "bool"
+            }
+        }
+    },
+    "reaction": {
+        "array": {
+            "name": {
+                "str": "str"
+            },
+            "entries": {
+                "array": {
+                    "str": "str"
+                }
+            }
+        }
+    },
+    "familiar": {
+        "bool": "bool"
+    }
+}
