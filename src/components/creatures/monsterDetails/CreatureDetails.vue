@@ -1,21 +1,21 @@
 <template>
-	<div class="monster-details">
-		<template v-if="monster">
-			<h2>{{ monster.name }}</h2>
-			<span>{{ monsterSize }} {{ monsterType }}</span>
+	<div class="creature-details">
+		<template v-if="creature">
+			<h2>{{ creature.name }}</h2>
+			<span>{{ creatureSize }} {{ creatureType }}</span>
 		</template>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'MonsterDetails',
+	name: 'CreatureDetails',
 	props: {
-		monster: Object,
+		creature: Object,
 	},
 	computed: {
-		monsterSize() {
-			switch (this.monster.size) {
+		creatureSize() {
+			switch (this.creature.size) {
 			case 'T':
 				return 'tiny';
 			case 'S':
@@ -33,8 +33,8 @@ export default {
 			}
 		},
 
-		monsterType() {
-			const { type } = this.monster;
+		creatureType() {
+			const { type } = this.creature;
 			if (typeof type === 'string') {
 				return type;
 			}
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-.monster-details{
-	grid-area: monster-details;
+.creature-details{
+	grid-area: creature-details;
 }
 </style>

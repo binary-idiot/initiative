@@ -1,21 +1,21 @@
 <template>
-	<div class="monster-list-item" @click="$emit('selectMonster', monsterName)">
-		{{ monsterName }}
+	<div class="creature-list-item" @click="$emit('selectCreature', creatureName)">
+		{{ creatureName }}
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'MonsterListItem',
-	emits: ['selectMonster'],
+	name: 'CreatureListItem',
+	emits: ['selectCreature'],
 	props: {
-		monsterName: String,
+		creatureName: String,
 	},
 };
 </script>
 
 <style lang="scss">
-.monster-list-item{
+.creature-list-item{
 	padding: 5px;
 	border: 1px solid black;
 	&:hover{

@@ -4,49 +4,49 @@
 	</header>
 
 	<main>
-		<MonsterList @change-selected-monster="selectedMonster = $event"></MonsterList>
-		<MonsterDetails :monster="selectedMonster"></MonsterDetails>
+		<CreatureList @change-selected-creature="selectedCreature = $event"></CreatureList>
+		<CreatureDetails :creature="selectedCreature"></CreatureDetails>
 	</main>
 </template>
 
 <script>
-import MonsterDetails from './components/MonsterDetails.vue';
-import MonsterList from './components/MonsterList.vue';
+import CreatureDetails from './components/creatures/monsterDetails/CreatureDetails.vue';
+import CreatureList from './components/creatures/creatureList/CreatureList.vue';
 
 export default {
 	name: 'App',
 	components: {
-		MonsterList,
-		MonsterDetails,
+		CreatureList,
+		CreatureDetails,
 	},
 
 	data() {
 		return {
-			monsters: [],
-			selectedMonster: null,
+			creatures: [],
+			selectedCreature: null,
 		};
 	},
 
 	provide() {
 		return {
-			monsters: this.monsters,
+			creatures: this.creatures,
 		};
 	},
 
 	async created() {
-		// Fetch list of sources and then fetch each source and add to monsters
+		// Fetch list of sources and then fetch each source and add to creatures
 		try {
 			const sources = await fetch('./data/sources.json').then((r) => r.json());
 
-			sources.monsters.forEach(async (source) => {
+			sources.creatures.forEach(async (source) => {
 				const data = await fetch(source).then((r) => r.json());
 
 				data.forEach((e) => {
-					this.monsters.push(e);
+					this.creatures.push(e);
 				});
 
-				if (Array.isArray(this.monsters) && this.monsters.length) {
-					this.selectedMonster = this.monsters[0];
+				if (Array.isArray(this.creatures) && this.creatures.length) {
+					this.selectedCreature = this.creatures[0];
 				}
 			});
 		} catch (e) {
@@ -70,7 +70,7 @@ export default {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas:
-			'monster-list monster-details monster-details';
+			'creature-list creature-details creature-details';
 	}
 }
 </style>
