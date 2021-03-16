@@ -1,7 +1,7 @@
 <template>
 	<div class="creature-detail-header">
 		<h2>{{ creature.name }}</h2>
-		<span>{{ creatureSize }} {{ creatureType }}</span>
+		<span>{{ creatureSize }} {{ creatureType }} | {{ alignment }}</span>
 	</div>
 </template>
 

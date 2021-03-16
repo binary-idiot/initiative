@@ -36,21 +36,26 @@ class AlignmentParser {
 		}
 	}
 
-	static parse(alignments) {
-		if (alignments.some((align) => typeof align !== 'string')) {
-			if (alignments.some((align) => typeof align === 'string')) throw new Error(`Mixed alignment types: ${JSON.stringify(alignments)}`);
+	static parse(alignList) {
+		if (alignList.some((align) => typeof align !== 'string')) {
+			if (alignList.some((align) => typeof align === 'string')) throw new Error(`Mixed alignment types: ${JSON.stringify(alignList)}`);
 			// filter out any nonexistent alignments
-			alignList = alignments.filter((align) => align.alignment === undefined || align.alignment != null);
+			const alignments = alignList.filter(
+				(align) => align.alignment === undefined || align.alignment != null,
+			);
 
 			// handle special alignments and join multiple alignments with 'or'
-			return alignList.map((align) => (align.special != null || align.chance != null || align.note != null ? abvToFull(align) : parse(align.alignment))).join(' or ');
+			return alignments.map(
+				(align) => (align.special != null || align.chance != null || align.note != null
+					? this.abvToFull(align) : this.parse(align.alignment)),
+			).join(' or ');
 		}
 		// assume all single-length arrays can be simply parsed
-		if (alignList.length === 1) return Parser.abvToFull(alignList[0]);
+		if (alignList.length === 1) return this.abvToFull(alignList[0]);
 
 		// a pair of abv's, e.g. 'L' 'G'
 		if (alignList.length === 2) {
-			return alignList.map((a) => Parser.abvToFull(a)).join(' ');
+			return alignList.map((a) => this.abvToFull(a)).join(' ');
 		}
 
 		if (alignList.length === 3) {
