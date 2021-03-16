@@ -1,11 +1,13 @@
 <template>
 	<div class="creature-detail-header">
 		<h2>{{ creature.name }}</h2>
-		<span>{{ creatureSize }} {{ creatureType }}</span>
+		<span>{{ creatureSize }} {{ creatureType }} | {{ alignment }}</span>
 	</div>
 </template>
 
 <script>
+import AlignmentParser from '@/utils/parsers/AlignmentParser';
+
 export default {
 	name: 'CreatureDetailHeader',
 
@@ -40,6 +42,10 @@ export default {
 			}
 
 			return `${type.type} (${type.tags}) `;
+		},
+
+		alignment() {
+			return AlignmentParser.parse(this.creature.alignment);
 		},
 	},
 };
