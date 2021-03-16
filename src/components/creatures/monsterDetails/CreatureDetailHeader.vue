@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import AlignmentParser from '@/utils/parsers/AlignmentParser';
+
 export default {
 	name: 'CreatureDetailHeader',
 
@@ -40,6 +42,10 @@ export default {
 			}
 
 			return `${type.type} (${type.tags}) `;
+		},
+
+		alignment() {
+			return AlignmentParser.parse(this.creature.alignment);
 		},
 	},
 };
