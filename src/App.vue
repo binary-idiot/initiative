@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CreatureDetails from './components/creatures/monsterDetails/CreatureDetails.vue';
+import CreatureDetails from './components/creatures/creatureDetails/CreatureDetails.vue';
 import CreatureList from './components/creatures/creatureList/CreatureList.vue';
 
 export default {
