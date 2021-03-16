@@ -19,22 +19,7 @@ export default {
 
 	computed: {
 		creatureSize() {
-			switch (this.creature.size) {
-			case 'T':
-				return 'tiny';
-			case 'S':
-				return 'small';
-			case 'M':
-				return 'medium';
-			case 'L':
-				return 'large';
-			case 'H':
-				return 'huge';
-			case 'G':
-				return 'gigantic';
-			default:
-				return null;
-			}
+			return this.$func.sizeToFull(this.creature.size);
 		},
 
 		creatureType() {
@@ -42,8 +27,14 @@ export default {
 			if (typeof type === 'string') {
 				return type;
 			}
+			if (type.tags) {
+				return `${type.type} (${type.tags}) `;
+			}
+			if (type.swarmSize) {
+				return `swarm of ${this.$func.sizeToFull(type.swarmSize)} ${type.type}s`;
+			}
 
-			return `${type.type} (${type.tags}) `;
+			return undefined;
 		},
 
 		alignment() {
