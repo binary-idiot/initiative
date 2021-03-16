@@ -6,18 +6,21 @@
 	<main>
 		<CreatureList @change-selected-creature="selectedCreature = $event"></CreatureList>
 		<CreatureDetails :creature="selectedCreature"></CreatureDetails>
+		<UpdateBar></UpdateBar>
 	</main>
 </template>
 
 <script>
 import CreatureDetails from './components/creatures/creatureDetails/CreatureDetails.vue';
 import CreatureList from './components/creatures/creatureList/CreatureList.vue';
+import UpdateBar from './components/UpdateBar.vue';
 
 export default {
 	name: 'App',
 	components: {
 		CreatureList,
 		CreatureDetails,
+		UpdateBar,
 	},
 
 	data() {
