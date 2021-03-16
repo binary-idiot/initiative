@@ -1,0 +1,41 @@
+<template>
+	<div class="creature-detail-scores">
+		<div class="score" v-for="score in scores" :key="score.key">
+			<span>{{ score.key.toUpperCase() }}</span>
+			<br>
+			<span>{{ score.value }} ({{ $func.calcMod(score.value) }})</span>
+		</div>
+	</div>
+</template>
+
+<script>
+export default {
+	name: 'CreatureDetailScores',
+
+	props: {
+		creature: Object,
+	},
+
+	computed: {
+		scores() {
+			return ['str', 'dex', 'con', 'int', 'wis', 'cha'].map((k) => ({
+				key: k,
+				value: this.creature[k],
+			}));
+		},
+	},
+};
+</script>
+
+<style lang="scss" scoped>
+	.creature-detail-scores{
+		width: 80%;
+		margin: 30px auto;
+		display: flex;
+		flex-direction: row;
+
+		.score{
+			flex-grow: 1;
+		}
+	}
+</style>
