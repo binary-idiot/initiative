@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24a9baa561de163f420c",
-    "url": "/css/app.b013b617.css"
+    "revision": "8193893bca62d8c25f92",
+    "url": "/css/app.b460d603.css"
   },
   {
-    "revision": "24a9baa561de163f420c",
-    "url": "/css/app.b013b617.css.map"
+    "revision": "8193893bca62d8c25f92",
+    "url": "/css/app.b460d603.css.map"
   },
   {
     "revision": "9d5f2a9bbaae65b895a0799b16478112",
@@ -44,16 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/icons/favicon-32x32.png"
   },
   {
-    "revision": "73dbe97fbeb34f2e0c10082bd3895257",
+    "revision": "5acbc73455da259ba164dbd38ac1ec6d",
     "url": "/index.html"
   },
   {
-    "revision": "24a9baa561de163f420c",
-    "url": "/js/app.8eafbd21.js"
+    "revision": "8193893bca62d8c25f92",
+    "url": "/js/app.a1b031ce.js"
   },
   {
-    "revision": "24a9baa561de163f420c",
-    "url": "/js/app.8eafbd21.js.map"
+    "revision": "8193893bca62d8c25f92",
+    "url": "/js/app.a1b031ce.js.map"
   },
   {
     "revision": "cc53e10c6e0c45443178",
