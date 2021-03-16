@@ -1,7 +1,9 @@
 <template>
 	<div class="creature-detail-header">
 		<h2>{{ creature.name }}</h2>
-		<span>{{ creatureSize }} {{ creatureType }} | {{ alignment }}</span>
+		<span class="creature-type">{{ $func.capitalize(creatureSize) }} {{ creatureType }}</span>
+		|
+		<span class="creature-alignment">{{ alignment }}</span>
 	</div>
 </template>
 
