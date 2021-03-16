@@ -43,7 +43,6 @@ export default {
 	methods: {
 		onSelectCreature(name) {
 			const selected = this.creatures.find((m) => m.name === name);
-			console.log(`${name} Selected`);
 			this.$emit('changeSelectedCreature', selected);
 		},
 		onChangePage(page) {
