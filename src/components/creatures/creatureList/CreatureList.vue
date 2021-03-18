@@ -75,11 +75,7 @@ export default {
 
 		li{
 			&:nth-child(even){
-				background-color: lightgray;
-			}
-
-			&:nth-child(odd){
-				background-color: white;
+				background-color: $contrast-light;
 			}
 		}
 	}

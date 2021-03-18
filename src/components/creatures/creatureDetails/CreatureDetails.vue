@@ -27,6 +27,10 @@ export default {
 
 <style lang="scss" scoped>
 .creature-details{
+	margin: 20px;
+	border: 5px solid $contrast-1;
+	border-radius: 1%;
 	grid-area: creature-details;
+	background-color: $background-alt;
 }
 </style>
