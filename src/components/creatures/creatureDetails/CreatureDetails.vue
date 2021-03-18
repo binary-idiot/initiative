@@ -2,6 +2,7 @@
 	<div class="creature-details">
 		<template v-if="creature">
 			<CreatureDetailHeader :creature="creature"></CreatureDetailHeader>
+			<CreatureDetailBasic :creature="creature"></CreatureDetailBasic>
 			<CreatureDetailScores :creature="creature"></CreatureDetailScores>
 		</template>
 	</div>
@@ -9,6 +10,7 @@
 
 <script>
 import CreatureDetailHeader from './CreatureDetailHeader.vue';
+import CreatureDetailBasic from './CreatureDetailBasic.vue';
 import CreatureDetailScores from './CreatureDetailScores.vue';
 
 export default {
@@ -16,6 +18,7 @@ export default {
 
 	components: {
 		CreatureDetailHeader,
+		CreatureDetailBasic,
 		CreatureDetailScores,
 	},
 
