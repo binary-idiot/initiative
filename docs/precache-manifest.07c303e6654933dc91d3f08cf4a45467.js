@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6452640f2341478bdeca",
-    "url": "/css/app.b2e8ca4e.css"
+    "revision": "2c05dabbbf9e36952765",
+    "url": "/css/app.151904b3.css"
   },
   {
-    "revision": "6452640f2341478bdeca",
-    "url": "/css/app.b2e8ca4e.css.map"
+    "revision": "2c05dabbbf9e36952765",
+    "url": "/css/app.151904b3.css.map"
   },
   {
     "revision": "9d5f2a9bbaae65b895a0799b16478112",
@@ -20,40 +20,52 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/data/spells/srd.json"
   },
   {
-    "revision": "e9cceb8dda1c68edbb61655fea994a4e",
+    "revision": "b8ed99bc99b93de78d948c74e6b27f8f",
     "url": "/favicon.ico"
   },
   {
-    "revision": "9f788aaaf2a9053fb70d168df9541426",
+    "revision": "1c35ca63a8df7ca80710fee36924e8a8",
     "url": "/img/icons/android-chrome-192x192.png"
   },
   {
-    "revision": "7d137faeb8f7f51902bae9c2496d8eef",
+    "revision": "f10fc5c82dcd68c9c9f6c4c77cbda4ab",
     "url": "/img/icons/android-chrome-512x512.png"
   },
   {
-    "revision": "5643fb70b4c65c64a0e8a96cc4d1c286",
+    "revision": "fc9a1d8e10d92c31fb18a35e7be610c3",
     "url": "/img/icons/apple-touch-icon.png"
   },
   {
-    "revision": "b1edfe702b3f1ed421981e165d906ee7",
+    "revision": "060f76a2f30e274c8805ab54067ef95b",
     "url": "/img/icons/favicon-16x16.png"
   },
   {
-    "revision": "c47c0a849eada4a6709347b31b3ae2e3",
+    "revision": "b89d5b8ab850f71d61b46ed52f32d0b6",
     "url": "/img/icons/favicon-32x32.png"
   },
   {
-    "revision": "2904373811cd8316235a92372f3e5791",
+    "revision": "c99015a19df310b3e5f9b773880823e4",
+    "url": "/img/icons/favicon.svg"
+  },
+  {
+    "revision": "461f3e197728a3035e57cb964623a84f",
+    "url": "/img/icons/mstile-144x144.png"
+  },
+  {
+    "revision": "2563444ef92a730e0ccfac36a4895f52",
+    "url": "/img/icons/safari-pinned-tab.svg"
+  },
+  {
+    "revision": "70822cea95ff1362dbde4d8cb1636a63",
     "url": "/index.html"
   },
   {
-    "revision": "6452640f2341478bdeca",
-    "url": "/js/app.b947d2e1.js"
+    "revision": "2c05dabbbf9e36952765",
+    "url": "/js/app.d3c46b13.js"
   },
   {
-    "revision": "6452640f2341478bdeca",
-    "url": "/js/app.b947d2e1.js.map"
+    "revision": "2c05dabbbf9e36952765",
+    "url": "/js/app.d3c46b13.js.map"
   },
   {
     "revision": "97d0b7083d4a63a3ecf8",
@@ -64,7 +76,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-vendors.f14623d5.js.map"
   },
   {
-    "revision": "09b0303bff60da46ce15a1d210ef3312",
+    "revision": "17351cd4825ae3f3d74a3ab6fd9584b1",
     "url": "/manifest.json"
   },
   {
