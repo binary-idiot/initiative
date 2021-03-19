@@ -1,6 +1,6 @@
 <template>
 	<div class="creature-detail-basics">
-		<div class="creature-ac"><strong>Armor Class</strong> {{ armorClass }}</div>
+		<div class="creature-ac"><strong>Armor Class</strong> <span v-html="armorClass"></span></div>
 		<div class="creature-hp"><strong>Hit Points</strong> {{ creature.hp.average }}
 		(<em>{{ creature.hp.formula }}</em>)</div>
 		<div class="creature-speed"><strong>Speed</strong> {{ speed }}</div>
@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import TagParser from '@/utils/parsers/TagParser';
+
 export default {
 	name: 'CreatureDetailBasic',
 	props: {
@@ -24,8 +26,8 @@ export default {
 
 				return [
 					acObj.ac,
-					acObj.from ? `(${acObj.from.join(', ')})` : '',
-					acObj.condition,
+					acObj.from ? `(${TagParser.parse(acObj.from.join(', '))})` : '',
+					acObj.condition ? TagParser.parse(acObj.condition) : '',
 				]
 					.filter(Boolean) // strip out any falsish values (replaces the inline ternaries)
 					.join(' ');
