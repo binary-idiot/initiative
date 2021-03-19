@@ -75,8 +75,15 @@ body{
 	main{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
 		grid-template-areas:
+			'creature-list creature-list creature-list'
+			'creature-details creature-details creature-details';
+
+		@media screen and (min-width: 750px) {
+			grid-template-areas:
 			'creature-list creature-details creature-details';
+		}
 	}
 }
 </style>

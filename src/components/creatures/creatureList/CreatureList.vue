@@ -68,6 +68,7 @@ export default {
 <style lang="scss" scoped>
 .creature-list{
 	grid-area: creature-list;
+	margin: 5px;
 
 	ul{
 		list-style: none;

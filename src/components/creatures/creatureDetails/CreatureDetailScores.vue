@@ -33,8 +33,10 @@ export default {
 		margin: 30px auto;
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 
 		.score{
+			padding: 3px;
 			flex-grow: 1;
 		}
 	}
