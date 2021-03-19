@@ -1,8 +1,9 @@
 <template>
 	<div class="creature-detail-basics">
 		<div class="creature-ac"><strong>Armor Class</strong> {{ armorClass }}</div>
-		<div class="creature-hp"></div>
-		<div class="creature-speed"></div>
+		<div class="creature-hp"><strong>Hit Points</strong> {{ creature.hp.average }}
+		(<em>{{ creature.hp.formula }}</em>)</div>
+		<div class="creature-speed"><strong>Speed</strong> {{ speed }}</div>
 	</div>
 </template>
 
@@ -14,21 +15,44 @@ export default {
 	},
 	computed: {
 		armorClass() {
-			let acStr = '';
+			// Credit to /^C(ode )?hunky Naito$/uigyms
+			// from webdev and web_design discord for suggesting rewrite
 
-			this.creature.ac.forEach((acObj) => {
-				let subStr = '';
-				if (typeof acObj === 'number') {
-					subStr = acObj;
-				} else {
-					subStr = `${acObj.ac} 
-					${(acObj.from) ? `(${acObj.from})` : ''}
-					${(acObj.condition) ? acObj.condition : ''}`;
-				}
-				acStr += (acStr === '') ? subStr : `, ${subStr}`;
+			const acArr = this.creature.ac.map((acObj) => {
+				// returning the number here is fine as the join later on will turn it into a string anyway
+				if (typeof acObj === 'number') return acObj;
+
+				return [
+					acObj.ac,
+					acObj.from ? `(${acObj.from.join(', ')})` : '',
+					acObj.condition,
+				]
+					.filter(Boolean) // strip out any falsish values (replaces the inline ternaries)
+					.join(' ');
 			});
 
-			return acStr;
+			return acArr.join(', ');
+		},
+		speed() {
+			// Credit to /^C(ode )?hunky Naito$/uigyms
+			// from webdev and web_design discord for suggesting rewrite
+
+			// for readabilities sake separating the map function out here
+			const transformSpeed = ([type, speedData]) => {
+				if (typeof speedData === 'number') return `${type} ${speedData}ft`;
+
+				return [
+					type,
+					`${speedData.number}ft`,
+					speedData.condition,
+				]
+					.join(' ');
+			};
+
+			return Object.entries(this.creature.speed)
+				.filter(([key]) => key !== 'canHover') // You can remove other keys here, if you are I'd create a set and use the `.has` method
+				.map(transformSpeed)
+				.join(', ');
 		},
 	},
 };
