@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.07c303e6654933dc91d3f08cf4a45467.js"
+  "/precache-manifest.f3317c6f748877b790835f323f60595a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "initiative"});
