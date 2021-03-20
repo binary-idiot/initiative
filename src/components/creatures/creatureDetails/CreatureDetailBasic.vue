@@ -63,9 +63,8 @@ export default {
 <style lang="scss" scoped>
 	.creature-detail-basics{
 		text-align: left;
-		margin: 15px;
 		padding: 10px;
-		border: 2px $contrast-1;
-		border-style: solid none;
+		//border: 2px $contrast-1;
+		//border-style: solid none;
 	}
 </style>
