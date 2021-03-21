@@ -115,6 +115,8 @@ export default {
 		text-align: left;
 		div{
 			padding: 2px;
+			padding-left: 2em;
+			text-indent: -2em;
 		}
 	}
 </style>
