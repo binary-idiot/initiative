@@ -38,7 +38,7 @@ export default {
 				.filter(Boolean)
 				.join(', ');
 
-			if (objs) {
+			if (objs.length > 0) {
 				dmgStr = dmgStr.concat((dmgStr) ? '; ' : '',
 					objs.map((obj) => {
 						if (obj.special) return obj.special;
