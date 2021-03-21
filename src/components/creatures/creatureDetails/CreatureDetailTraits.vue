@@ -41,14 +41,11 @@ export default {
 			if (objs) {
 				dmgStr = dmgStr.concat('; ',
 					objs.map((obj) => {
-						console.log(obj);
 						const dmgList = Object.values(obj[type]);
-						console.log(dmgList);
 						const dmgListStr = dmgList.slice(0, dmgList.length - 1)
 							.join(', ')
 							.concat(', and ', dmgList[dmgList.length - 1])
 							.concat(' ', obj.note);
-						console.log(dmgListStr);
 						return dmgListStr;
 					})
 						.join('; '));
