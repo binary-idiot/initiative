@@ -1,5 +1,6 @@
 import json
 
+oldFile = input("File with existing structure")
 analyseFile = input("File to analyse")
 outputFile = input("File to output")
 
@@ -50,6 +51,10 @@ def analyseField(field, parent):
             return parent
         else:
             return None
+
+if oldFile:
+    with open(oldFile, 'r') as old:
+        structure = json.load(old)
 
 with open(analyseFile, 'r') as file:
     data = json.load(file)
