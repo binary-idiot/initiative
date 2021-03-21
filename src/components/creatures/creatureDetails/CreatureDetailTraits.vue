@@ -1,9 +1,9 @@
 <template>
 	<div class="creature-detail-traits">
-		<div class="creature-saves">
+		<div class="creature-saves" v-if="saves">
 			<strong>Saving Throws</strong> <span v-html="saves"></span>
 		</div>
-		<div class="creature-skills">
+		<div class="creature-skills" v-if="skills">
 			<strong>Skills</strong> <span v-html="skills"></span>
 		</div>
 		<div class="creature-resist" v-if="resist">
@@ -27,26 +27,29 @@ export default {
 				.map(([type, mod]) => ` ${this.$func.capitalize(type)} <em>${mod}</em>`)
 				.join(', ');
 		},
-		listDamage(list) {
-			if (typeof list === 'undefined') return undefined;
+		listDamageTraits(list, type) {
+			console.log(list);
 			const objs = [];
-			const dmgStr = list.map((dmg) => {
+			let dmgStr = list.map((dmg) => {
 				if (typeof dmg === 'string') return dmg;
 				objs.push(dmg);
 				return '';
 			})
+				.filter(Boolean)
 				.join(', ');
 
 			if (objs) {
-				dmgStr.concat('; ',
+				dmgStr = dmgStr.concat('; ',
 					objs.map((obj) => {
-						const dmgList = obj.find((e) => Array.isArray(e));
-						dmgList.slice(0, dmgList.length - 2)
+						console.log(obj);
+						const dmgList = Object.values(obj[type]);
+						console.log(dmgList);
+						const dmgListStr = dmgList.slice(0, dmgList.length - 1)
 							.join(', ')
-							.concat(', and ', dmgList.at(-1))
+							.concat(', and ', dmgList[dmgList.length - 1])
 							.concat(' ', obj.note);
-
-						return dmgList;
+						console.log(dmgListStr);
+						return dmgListStr;
 					})
 						.join('; '));
 			}
@@ -56,16 +59,20 @@ export default {
 	},
 	computed: {
 		saves() {
-			return this.listTraits(this.creature.save);
+			if ('save' in this.creature) return this.listTraits(this.creature.save);
+			return undefined;
 		},
 		skills() {
-			return this.listTraits(this.creature.skill);
+			if ('skill' in this.creature) return this.listTraits(this.creature.skill);
+			return undefined;
 		},
 		resist() {
-			return this.listDamage(this.creature.resist);
+			if ('resist' in this.creature) return this.listDamageTraits(this.creature.resist, 'resist');
+			return undefined;
 		},
 		immune() {
-			return this.listDamage(this.creature.immune);
+			if ('immune' in this.creature) return this.listDamageTraits(this.creature.immune, 'immune');
+			return undefined;
 		},
 	},
 };
