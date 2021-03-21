@@ -2,11 +2,8 @@
 	<div class="creature-details">
 		<template v-if="creature">
 			<CreatureDetailHeader :creature="creature"></CreatureDetailHeader>
-			<hr>
 			<CreatureDetailBasic :creature="creature"></CreatureDetailBasic>
-			<hr>
 			<CreatureDetailScores :creature="creature"></CreatureDetailScores>
-			<hr>
 			<CreatureDetailTraits :creature="creature"></CreatureDetailTraits>
 		</template>
 	</div>

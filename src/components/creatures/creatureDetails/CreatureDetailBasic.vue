@@ -1,5 +1,6 @@
 <template>
 	<div class="creature-detail-basics">
+		<hr>
 		<div class="creature-ac"><strong>Armor Class</strong> <span v-html="armorClass"></span></div>
 		<div class="creature-hp"><strong>Hit Points</strong> {{ creature.hp.average }}
 		(<em>{{ creature.hp.formula }}</em>)</div>

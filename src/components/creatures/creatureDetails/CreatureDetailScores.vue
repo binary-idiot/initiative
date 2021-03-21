@@ -1,5 +1,6 @@
 <template>
 	<div class="creature-detail-scores">
+		<hr>
 		<div class="score" v-for="score in scores" :key="score.key">
 			<span>{{ score.key.toUpperCase() }}</span>
 			<br>
