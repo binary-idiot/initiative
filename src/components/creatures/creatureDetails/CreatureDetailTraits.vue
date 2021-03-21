@@ -12,6 +12,18 @@
 		<div class="creature-immune" v-if="immune">
 			<strong>Damage Immunities</strong> <span>{{ immune }}</span>
 		</div>
+		<div class="creature-conditions" v-if="conditions">
+			<strong>Condtiton Immunities</strong> <span>{{ conditions }}</span>
+		</div>
+		<div class="creature-senses" >
+			<strong>Senses</strong> <span> {{ senses }} </span>
+		</div>
+		<div class="creature-languages">
+			<strong>Languages</strong> <span>{{ languages }}</span>
+		</div>
+		<div class="creature-chalange">
+			<strong>Challange</strong> <span>{{ challange }}</span>
+		</div>
 	</div>
 </template>
 
@@ -72,6 +84,27 @@ export default {
 			if ('immune' in this.creature) return this.listDamageTraits(this.creature.immune, 'immune');
 			return undefined;
 		},
+		senses() {
+			const senseStr = this.creature.senses?.join(', ');
+			const passiveStr = `passive Perception ${this.creature.passive}`;
+
+			return (senseStr) ? senseStr.concat(', ', passiveStr) : passiveStr;
+		},
+		conditions() {
+			return this.creature.conditionImmune?.join(', ');
+		},
+		languages() {
+			const languageStr = this.creature.languages?.join(', ');
+
+			return languageStr || '---';
+		},
+		challange() {
+			if (typeof this.creature.cr === 'string') return this.creature.cr;
+
+			const str = (this.creature.cr.lair) ? `${this.creature.cr.lair} when encountered in lair`
+				: `${this.creature.cr.coven} when part of a coven`;
+			return `${this.challange.cr.cr}${(str) ? ` or ${str}` : ''}`;
+		},
 	},
 };
 </script>
@@ -80,5 +113,8 @@ export default {
 	.creature-detail-traits{
 		padding: 10px;
 		text-align: left;
+		div{
+			padding: 2px;
+		}
 	}
 </style>
