@@ -39,8 +39,9 @@ export default {
 				.join(', ');
 
 			if (objs) {
-				dmgStr = dmgStr.concat('; ',
+				dmgStr = dmgStr.concat((dmgStr) ? '; ' : '',
 					objs.map((obj) => {
+						if (obj.special) return obj.special;
 						const dmgList = Object.values(obj[type]);
 						const dmgListStr = dmgList.slice(0, dmgList.length - 1)
 							.join(', ')
