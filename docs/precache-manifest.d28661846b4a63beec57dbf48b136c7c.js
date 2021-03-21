@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e25efc9e107183ada3de",
-    "url": "/css/app.23b80b9e.css"
+    "revision": "ff80cc867668d42ed647",
+    "url": "/css/app.0c234201.css"
   },
   {
-    "revision": "e25efc9e107183ada3de",
-    "url": "/css/app.23b80b9e.css.map"
+    "revision": "ff80cc867668d42ed647",
+    "url": "/css/app.0c234201.css.map"
   },
   {
     "revision": "9d5f2a9bbaae65b895a0799b16478112",
@@ -44,7 +44,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/icons/favicon-32x32.png"
   },
   {
-    "revision": "b58661f7bc7df86bb16bd0f31c7b4d96",
+    "revision": "c99015a19df310b3e5f9b773880823e4",
     "url": "/img/icons/favicon.svg"
   },
   {
@@ -52,28 +52,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/icons/mstile-144x144.png"
   },
   {
-    "revision": "6bbc167a8069cf84e5088c27b8d08bff",
+    "revision": "2563444ef92a730e0ccfac36a4895f52",
     "url": "/img/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "0c941fcbe568b906f4adebd98de6336d",
+    "revision": "cb042de76e3c14a89103f6b36512124a",
     "url": "/index.html"
   },
   {
-    "revision": "e25efc9e107183ada3de",
-    "url": "/js/app.b56c61be.js"
+    "revision": "ff80cc867668d42ed647",
+    "url": "/js/app.8afa52e8.js"
   },
   {
-    "revision": "e25efc9e107183ada3de",
-    "url": "/js/app.b56c61be.js.map"
+    "revision": "ff80cc867668d42ed647",
+    "url": "/js/app.8afa52e8.js.map"
   },
   {
-    "revision": "ac86ca1f5ce95db1a915",
-    "url": "/js/chunk-vendors.419e6c2a.js"
+    "revision": "4a18ac95e7db9a18766b",
+    "url": "/js/chunk-vendors.2b92df9b.js"
   },
   {
-    "revision": "ac86ca1f5ce95db1a915",
-    "url": "/js/chunk-vendors.419e6c2a.js.map"
+    "revision": "4a18ac95e7db9a18766b",
+    "url": "/js/chunk-vendors.2b92df9b.js.map"
   },
   {
     "revision": "17351cd4825ae3f3d74a3ab6fd9584b1",
