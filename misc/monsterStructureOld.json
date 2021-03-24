@@ -61,11 +61,7 @@
             },
             "int": "int",
             "condition": {
-                "str": "str",
-                "tagStr": "str"
-            },
-            "braces": {
-                "bool": "bool"
+                "str": "str"
             }
         }
     },
@@ -241,32 +237,12 @@
     "action": {
         "array": {
             "name": {
-                "str": "str",
-                "tagStr": "str"
+                "str": "str"
             },
             "entries": {
                 "array": {
                     "str": "str",
-                    "tagStr": "str",
-                    "type": {
-                        "str": "str"
-                    },
-                    "style": {
-                        "str": "str"
-                    },
-                    "items": {
-                        "array": {
-                            "type": {
-                                "str": "str"
-                            },
-                            "name": {
-                                "str": "str"
-                            },
-                            "entry": {
-                                "tagStr": "str"
-                            }
-                        }
-                    }
+                    "tagStr": "str"
                 }
             }
         }
@@ -535,6 +511,9 @@
     "resist": {
         "array": {
             "str": "str",
+            "special": {
+                "str": "str"
+            },
             "resist": {
                 "array": {
                     "str": "str"
@@ -545,12 +524,6 @@
             },
             "cond": {
                 "bool": "bool"
-            },
-            "special": {
-                "str": "str"
-            },
-            "preNote": {
-                "str": "str"
             }
         }
     },
@@ -570,66 +543,7 @@
             "entries": {
                 "array": {
                     "tagStr": "str",
-                    "str": "str",
-                    "name": {
-                        "str": "str",
-                        "tagStr": "str"
-                    },
-                    "type": {
-                        "str": "str"
-                    },
-                    "entries": {
-                        "array": {
-                            "str": "str",
-                            "tagStr": "str",
-                            "type": {
-                                "str": "str"
-                            },
-                            "name": {
-                                "str": "str"
-                            },
-                            "entries": {
-                                "array": {
-                                    "tagStr": "str"
-                                }
-                            }
-                        }
-                    },
-                    "style": {
-                        "str": "str"
-                    },
-                    "items": {
-                        "array": {
-                            "tagStr": "str",
-                            "type": {
-                                "str": "str"
-                            },
-                            "name": {
-                                "str": "str"
-                            },
-                            "entry": {
-                                "str": "str"
-                            }
-                        }
-                    },
-                    "colLabels": {
-                        "array": {
-                            "str": "str"
-                        }
-                    },
-                    "colStyles": {
-                        "array": {
-                            "str": "str"
-                        }
-                    },
-                    "rows": {
-                        "array": {
-                            "array": {
-                                "str": "str",
-                                "tagStr": "str"
-                            }
-                        }
-                    }
+                    "str": "str"
                 }
             },
             "variantSource": {

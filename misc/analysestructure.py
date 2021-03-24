@@ -8,18 +8,22 @@ structure = {}
 
 def analyseField(field, parent):
     if isinstance(field, list):
-        value = field[0]
-        itemStructure = parent.get('array')
+        updated = False
 
-        if itemStructure == None:
-            itemStructure = {}
+        for value in field:
+            itemStructure = parent.get('array')
 
-        updatedStructure = analyseField(value, itemStructure)
-        if(updatedStructure != None):
-            parent.update({'array': updatedStructure})
+            if itemStructure == None:
+                itemStructure = {}
+
+            updatedStructure = analyseField(value, itemStructure)
+            if updatedStructure != None:
+                parent.update({'array': updatedStructure})
+                updated = True
+        if updated:
             return parent
         else:
-            return None
+            None
 
     elif isinstance(field, dict):
         updated = False
@@ -46,7 +50,7 @@ def analyseField(field, parent):
             fieldKey = 'tagStr'
 
         item = parent.get(fieldKey)
-        if(item == None):
+        if item == None:
             parent.update({fieldKey: fieldType})
             return parent
         else:
