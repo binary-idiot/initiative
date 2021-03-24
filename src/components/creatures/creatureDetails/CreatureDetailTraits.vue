@@ -60,7 +60,7 @@ export default {
 							.join(', ')
 							.concat(', and ', dmgList[dmgList.length - 1])
 							.concat(' ', obj.note);
-						return dmgListStr;
+						return (obj.preNote) ? `${obj.preNote} ${dmgListStr}` : dmgListStr;
 					})
 						.join('; '));
 			}
