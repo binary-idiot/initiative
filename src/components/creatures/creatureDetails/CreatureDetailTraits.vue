@@ -1,6 +1,5 @@
 <template>
 	<div class="creature-detail-traits">
-		<hr>
 		<div class="creature-saves" v-if="saves">
 			<strong>Saving Throws</strong> <span v-html="saves"></span>
 		</div>

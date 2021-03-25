@@ -50,5 +50,14 @@ export default {
 	border-radius: 1%;
 	grid-area: creature-details;
 	background-color: $background-alt;
+
+	div{
+		border-top: 2px solid $contrast-2;
+
+		&:first-child{
+			border-top: none;
+		}
+	}
+
 }
 </style>

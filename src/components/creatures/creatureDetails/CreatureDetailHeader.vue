@@ -47,5 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+	.creature-detail-header{
+		padding-bottom: 5px;
+	}
 </style>

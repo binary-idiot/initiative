@@ -1,11 +1,12 @@
 <template>
 	<div class="creature-detail-scores">
-		<hr>
-		<div class="score" v-for="score in scores" :key="score.key">
-			<span>{{ score.key.toUpperCase() }}</span>
-			<br>
-			<span>{{ score.value }} ({{ $func.calcMod(score.value) }})</span>
-		</div>
+		<ul class="scores">
+			<li class="score" v-for="score in scores" :key="score.key">
+				<span>{{ score.key.toUpperCase() }}</span>
+				<br>
+				<span>{{ score.value }} ({{ $func.calcMod(score.value) }})</span>
+			</li>
+		</ul>
 	</div>
 </template>
 
@@ -30,15 +31,18 @@ export default {
 
 <style lang="scss" scoped>
 	.creature-detail-scores{
-		width: 80%;
-		margin: 30px auto;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
 
-		.score{
-			padding: 3px;
-			flex-grow: 1;
+		.scores{
+			width: 80%;
+			margin: 30px auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.score{
+				padding: 3px;
+				flex-grow: 1;
+			}
 		}
 	}
 </style>
