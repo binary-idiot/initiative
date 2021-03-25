@@ -28,6 +28,8 @@
 						{{ dailyTitle(spells, key) }}<span v-html="parseEntries(spells, ', ')"></span>
 					</li>
 				</ul>
+				<p v-if="spellcasting.footerEntries"
+				v-html="parseEntries(spellcasting.footerEntries, '\n')"></p>
 			</div>
 		</div>
 	</div>
@@ -65,6 +67,14 @@ export default {
 		text-align: left;
 
 		.spellcasting{
+			div{
+				margin: 15px 0;
+			}
+
+			p{
+				margin: 2px 0;
+			}
+
 			li{
 				padding: 3px 0;
 			}
