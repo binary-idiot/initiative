@@ -105,7 +105,7 @@ export default {
 
 			const str = (this.creature.cr.lair) ? `${this.creature.cr.lair} when encountered in lair`
 				: `${this.creature.cr.coven} when part of a coven`;
-			return `${this.challange.cr.cr}${(str) ? ` or ${str}` : ''}`;
+			return `${this.creature.cr.cr}${(str) ? ` or ${str}` : ''}`;
 		},
 	},
 };
