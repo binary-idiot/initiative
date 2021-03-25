@@ -1,29 +1,31 @@
 <template>
 	<div class="creature-detail-traits">
-		<div class="creature-saves" v-if="saves">
-			<strong>Saving Throws</strong> <span v-html="saves"></span>
-		</div>
-		<div class="creature-skills" v-if="skills">
-			<strong>Skills</strong> <span v-html="skills"></span>
-		</div>
-		<div class="creature-resist" v-if="resist">
-			<strong>Damage Resistances</strong> <span>{{ resist }}</span>
-		</div>
-		<div class="creature-immune" v-if="immune">
-			<strong>Damage Immunities</strong> <span>{{ immune }}</span>
-		</div>
-		<div class="creature-conditions" v-if="conditions">
-			<strong>Condtiton Immunities</strong> <span>{{ conditions }}</span>
-		</div>
-		<div class="creature-senses" >
-			<strong>Senses</strong> <span> {{ senses }} </span>
-		</div>
-		<div class="creature-languages">
-			<strong>Languages</strong> <span>{{ languages }}</span>
-		</div>
-		<div class="creature-chalange">
-			<strong>Challange</strong> <span>{{ challange }}</span>
-		</div>
+		<ul>
+			<li class="creature-saves" v-if="saves">
+				<strong>Saving Throws</strong> <span v-html="saves"></span>
+			</li>
+			<li class="creature-skills" v-if="skills">
+				<strong>Skills</strong> <span v-html="skills"></span>
+			</li>
+			<li class="creature-resist" v-if="resist">
+				<strong>Damage Resistances</strong> <span>{{ resist }}</span>
+			</li>
+			<li class="creature-immune" v-if="immune">
+				<strong>Damage Immunities</strong> <span>{{ immune }}</span>
+			</li>
+			<li class="creature-conditions" v-if="conditions">
+				<strong>Condtiton Immunities</strong> <span>{{ conditions }}</span>
+			</li>
+			<li class="creature-senses" >
+				<strong>Senses</strong> <span v-html="senses"></span>
+			</li>
+			<li class="creature-languages">
+				<strong>Languages</strong> <span>{{ languages }}</span>
+			</li>
+			<li class="creature-chalange">
+				<strong>Challange</strong> <span>{{ challange }}</span>
+			</li>
+		</ul>
 	</div>
 </template>
 
@@ -36,7 +38,7 @@ export default {
 	methods: {
 		listTraits(trait) {
 			return Object.entries(trait)
-				.map(([type, mod]) => ` ${this.$func.capitalize(type)} <em>${mod}</em>`)
+				.map(([type, mod]) => ` ${this.$func.capitalize(type)}&nbsp;<em>${mod}</em>`)
 				.join(', ');
 		},
 		listDamageTraits(list, type) {
@@ -86,7 +88,7 @@ export default {
 		},
 		senses() {
 			const senseStr = this.creature.senses?.join(', ');
-			const passiveStr = `passive Perception ${this.creature.passive}`;
+			const passiveStr = `passive&nbsp;Perception&nbsp;${this.creature.passive}`;
 
 			return (senseStr) ? senseStr.concat(', ', passiveStr) : passiveStr;
 		},
@@ -111,12 +113,10 @@ export default {
 
 <style lang="scss" scoped>
 	.creature-detail-traits{
-		padding: 10px;
 		text-align: left;
-		div{
-			padding: 2px;
-			padding-left: 2em;
-			text-indent: -2em;
+		padding: 5px 0;
+		li{
+			padding: 4px 0;
 		}
 	}
 </style>
