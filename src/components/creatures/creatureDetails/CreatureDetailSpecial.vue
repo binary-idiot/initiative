@@ -1,5 +1,5 @@
 <template>
-	<div class="creature-detail-special">
+	<div class="creature-detail-special" v-if="creature.trait || creature.spellcasting">
 		<ul v-if="creature.trait">
 			<li v-for="(trait, index) in creature.trait" :key="index">
 				<p>
@@ -18,6 +18,14 @@
 				<ul v-if="spellcasting.spells">
 					<li v-for="(spells, key) in spellcasting.spells" :key="key">
 						{{ spellTitle(spells, key) }}<span v-html="parseEntries(spells.spells, ', ')"></span>
+					</li>
+				</ul>
+				<ul v-if="spellcasting.daily">
+					<li v-if="spellcasting.will">
+						At will: <span v-html="parseEntries(spellcasting.will, ', ')"></span>
+					</li>
+					<li v-for="(spells, key) in spellcasting.daily" :key="key">
+						{{ dailyTitle(spells, key) }}<span v-html="parseEntries(spells, ', ')"></span>
 					</li>
 				</ul>
 			</div>
@@ -41,6 +49,12 @@ export default {
 		spellTitle(spells, key) {
 			if (key === '0') return 'Cantrips (at will): ';
 			return `${this.$func.ordinal(key)} level (${spells.slots} slot${(spells.slots > 1) ? 's' : ''}): `;
+		},
+		dailyTitle(spells, key) {
+			const each = key.includes('e');
+			const times = key.substring(0, 1);
+
+			return `${times}/day${each ? ' each' : ''}: `;
 		},
 	},
 };
