@@ -13,7 +13,7 @@ class TagParser {
 		case 'damage':
 			return `<strong>${params[0]}</strong>`;
 		case 'dc':
-			return `<strong>DC: ${params[0]}</strong>`;
+			return `DC: ${params[0]}`;
 		case 'atk': {
 			const weaponType = params[0].split(',')
 				.map((wt) => ((wt === 'mw') ? 'melee' : 'ranged'));
