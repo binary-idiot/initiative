@@ -1,6 +1,6 @@
 class TagParser {
 	static replaceTag(match, tag, paramStr) {
-		const params = paramStr.split('|');
+		const params = (paramStr) ? paramStr.split('|') : undefined;
 		switch (tag) {
 		case 'item':
 		case 'spell':

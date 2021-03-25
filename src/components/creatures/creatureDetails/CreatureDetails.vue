@@ -6,6 +6,7 @@
 			<CreatureDetailScores :creature="creature"></CreatureDetailScores>
 			<CreatureDetailTraits :creature="creature"></CreatureDetailTraits>
 			<CreatureDetailSpecial :creature="creature"></CreatureDetailSpecial>
+			<CreatureDetailActions :creature="creature"></CreatureDetailActions>
 		</template>
 	</div>
 </template>
@@ -16,6 +17,7 @@ import CreatureDetailBasic from './CreatureDetailBasic.vue';
 import CreatureDetailScores from './CreatureDetailScores.vue';
 import CreatureDetailTraits from './CreatureDetailTraits.vue';
 import CreatureDetailSpecial from './CreatureDetailSpecial.vue';
+import CreatureDetailActions from './CreatureDetailActions.vue';
 
 export default {
 	name: 'CreatureDetails',
@@ -26,6 +28,7 @@ export default {
 		CreatureDetailScores,
 		CreatureDetailTraits,
 		CreatureDetailSpecial,
+		CreatureDetailActions,
 	},
 
 	props: {
@@ -54,7 +57,7 @@ export default {
 	div{
 		border-top: 2px solid $contrast-2;
 
-		&:first-child{
+		&:first-child, &.no-border{
 			border-top: none;
 		}
 	}
