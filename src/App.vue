@@ -39,19 +39,21 @@ export default {
 	async created() {
 		// Fetch list of sources and then fetch each source and add to creatures
 		try {
-			const sources = await fetch('./data/sources.json').then((r) => r.json());
+			// Credit to /^C(ode )?hunky Naito$/uigyms
+			// from webdev and web_design discord for suggesting rewrite
+			const sourceResponse = await fetch('./data/sources.json');
+			const sources = await sourceResponse.json();
 
-			sources.creatures.forEach(async (source) => {
-				const data = await fetch(source).then((r) => r.json());
+			const results = await Promise.all(
+				sources.creatures.map(async (source) => {
+					const response = await fetch(source);
+					return response.json();
+				}),
+			);
 
-				data.forEach((e) => {
-					this.creatures.push(e);
-				});
+			this.creatures.push(...results.flat()); // consistent order
 
-				if (Array.isArray(this.creatures) && this.creatures.length) {
-					this.selectedCreature = this.creatures[0];
-				}
-			});
+			this.selectedCreature = this.creatures?.[0];
 		} catch (e) {
 			console.error(e);
 		}
