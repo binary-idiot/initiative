@@ -1,5 +1,5 @@
 <template>
-	<section class="creature-section">
+	<section class="creatures-section">
 		<CreatureList v-if="creatures"></CreatureList>
 		<CreatureDetails :creature="creature" v-if="creature"></CreatureDetails>
 	</section>

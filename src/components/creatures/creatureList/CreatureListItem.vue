@@ -24,5 +24,14 @@ export default {
 	&:hover{
 		background-color: lightblue;
 	}
+
+	a{
+		color: inherit;
+		text-decoration: none;
+
+		&:hover{
+			color: inherit;
+		}
+	}
 }
 </style>
