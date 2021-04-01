@@ -60,7 +60,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .creature-list{
-	grid-area: 'creature-list';
+	grid-area: creature-list;
 	margin: 5px;
 
 	ul{
