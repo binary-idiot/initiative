@@ -17,7 +17,7 @@ module.exports = {
 			background_color: '#ffffff',
 		},
 		workboxOptions: {
-			exclude: ['CNAME'],
+			exclude: ['CNAME', '_redirects'],
 			navigateFallback: 'index.html',
 		},
 	},
