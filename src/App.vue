@@ -1,6 +1,8 @@
 <template>
 	<header>
-		<h1>Initiative</h1>
+		<router-link to="/">
+			<h1>Initiative</h1>
+		</router-link>
 	</header>
 
 	<main>
@@ -74,4 +76,11 @@ body{
 	text-align: center;
 	color: #2c3e50;
 }
+</style>
+
+<style lang="scss" scoped>
+	a{
+		color: inherit;
+		text-decoration: none;
+	}
 </style>
