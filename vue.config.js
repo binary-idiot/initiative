@@ -17,8 +17,8 @@ module.exports = {
 			background_color: '#ffffff',
 		},
 		workboxOptions: {
-			exclude: ['CNAME']
-		}
+			exclude: ['CNAME'],
+		},
 	},
 	css: {
 		sourceMap: true,

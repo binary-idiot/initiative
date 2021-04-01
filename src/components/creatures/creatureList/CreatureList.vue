@@ -3,10 +3,7 @@
 		<h3>Creature List</h3>
 		<ul>
 				<li v-for="creature in creaturePage" :key="creature.name">
-					<CreatureListItem
-						:creatureName="creature.name"
-						@select-creature="onSelectCreature($event)">
-					</CreatureListItem>
+					<CreatureListItem :creatureName="creature.name"></CreatureListItem>
 				</li>
 		</ul>
 
@@ -41,10 +38,6 @@ export default {
 	inject: ['creatures'],
 
 	methods: {
-		onSelectCreature(name) {
-			const selected = this.creatures.find((m) => m.name === name);
-			this.$emit('changeSelectedCreature', selected);
-		},
 		onChangePage(page) {
 			const oldPage = this.currentPage;
 			if (page <= this.creatures.length / this.creaturesPerPage && page >= 0) {

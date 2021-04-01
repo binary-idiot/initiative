@@ -1,6 +1,9 @@
 <template>
 	<div class="creature-list-item" @click="$emit('selectCreature', creatureName)">
+		<router-link
+		:to="{name: 'Creature', params: {creature: creatureName}}">
 		{{ creatureName }}
+		</router-link>
 	</div>
 </template>
 

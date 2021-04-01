@@ -4,29 +4,29 @@
 	</header>
 
 	<main>
-		<CreatureList @change-selected-creature="selectedCreature = $event"></CreatureList>
-		<CreatureDetails :creature="selectedCreature"></CreatureDetails>
+		<template v-if="creaturesLoaded">
+			<router-view></router-view>
+		</template>
+		<template v-else>
+			<h2>Content is loading...</h2>
+		</template>
 		<UpdateBar></UpdateBar>
 	</main>
 </template>
 
 <script>
-import CreatureDetails from './components/creatures/creatureDetails/CreatureDetails.vue';
-import CreatureList from './components/creatures/creatureList/CreatureList.vue';
 import UpdateBar from './components/UpdateBar.vue';
 
 export default {
 	name: 'App',
 	components: {
-		CreatureList,
-		CreatureDetails,
 		UpdateBar,
 	},
 
 	data() {
 		return {
 			creatures: [],
-			selectedCreature: null,
+			creaturesLoaded: false,
 		};
 	},
 
@@ -53,7 +53,7 @@ export default {
 
 			this.creatures.push(...results.flat()); // consistent order
 
-			this.selectedCreature = this.creatures?.[0];
+			this.creaturesLoaded = true;
 		} catch (e) {
 			console.error(e);
 		}
@@ -73,19 +73,5 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
-
-	main{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: auto;
-		grid-template-areas:
-			'creature-list creature-list creature-list'
-			'creature-details creature-details creature-details';
-
-		@media screen and (min-width: 750px) {
-			grid-template-areas:
-			'creature-list creature-details creature-details';
-		}
-	}
 }
 </style>
