@@ -41,7 +41,7 @@ export default {
 		try {
 			// Credit to /^C(ode )?hunky Naito$/uigyms
 			// from webdev and web_design discord for suggesting rewrite
-			const sourceResponse = await fetch('./data/sources.json');
+			const sourceResponse = await fetch('/data/sources.json');
 			const sources = await sourceResponse.json();
 
 			const results = await Promise.all(

@@ -1,8 +1,8 @@
 {
     "creatures": [
-        "./data/creatures/srd.json"
+        "/data/creatures/srd.json"
     ],
     "spells": [
-        "./data/spells/srd.json"
+        "/data/spells/srd.json"
     ]
 }

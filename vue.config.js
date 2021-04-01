@@ -18,6 +18,7 @@ module.exports = {
 		},
 		workboxOptions: {
 			exclude: ['CNAME'],
+			navigateFallback: 'index.html',
 		},
 	},
 	css: {
