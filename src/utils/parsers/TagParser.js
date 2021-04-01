@@ -25,7 +25,7 @@ class TagParser {
 		case 'h':
 			return '<em>Hit:</em>';
 		case 'recharge':
-			return `<strong>(Recharge ${(params[0]) ? `${params[0]}-6` : 6})</strong>`;
+			return `<strong>(Recharge ${(params) ? `${params[0]}-6` : 6})</strong>`;
 		case 'chance':
 			return params[1];
 		default:
