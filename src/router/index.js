@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { trackRouter } from 'vue-gtag-next';
 import CreatureView from '../views/Creatures.vue';
 
 const routes = [
@@ -19,5 +20,7 @@ const router = createRouter({
 	history: createWebHistory('/'),
 	routes,
 });
+
+trackRouter(router);
 
 export default router;
