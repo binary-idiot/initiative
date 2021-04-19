@@ -49,6 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 	button {
+		width: 2em;
 		& .icon-default {
 			display: inline;
 		}

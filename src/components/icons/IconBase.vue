@@ -1,9 +1,9 @@
 <!-- Icon system from: https://github.com/sdras/vue-sample-svg-icons -->
 <template>
   <svg class="icon" xmlns="http://www.w3.org/2000/svg"
-	:width="width"
-	:height="height"
-	viewBox="0 0 18 18"
+	width="100%"
+	height="100%"
+	:viewBox="viewBox"
 	:aria-labelledby="iconName"
 	role="presentation"
   >
@@ -31,6 +31,11 @@ export default {
 		iconColor: {
 			type: String,
 			default: 'currentColor',
+		},
+	},
+	computed: {
+		viewBox() {
+			return `0 0 ${this.width} ${this.height}`;
 		},
 	},
 };

@@ -13,16 +13,19 @@
 			<h2>Content is loading...</h2>
 		</template>
 		<UpdateBar></UpdateBar>
+		<MenuBar></MenuBar>
 	</main>
 </template>
 
 <script>
 import UpdateBar from './components/UpdateBar.vue';
+import MenuBar from './components/MenuBar.vue';
 
 export default {
 	name: 'App',
 	components: {
 		UpdateBar,
+		MenuBar,
 	},
 
 	data() {
