@@ -1,5 +1,5 @@
 <template>
-	<section class="creatures-section">
+	<section class="creatures-view">
 		<CreatureList v-if="creatures"></CreatureList>
 		<CreatureDetails :creature="creature" v-if="creature"></CreatureDetails>
 	</section>
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.creatures-section{
+	.creatures-view{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: auto;

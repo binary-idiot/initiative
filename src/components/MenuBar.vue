@@ -1,8 +1,14 @@
 <template>
 	<nav class="menu-bar">
-		<IconBase :width="24" :height="24" icon-name="creatures"><IconCreature /></IconBase>
-		<IconBase :width="35" :height="35" icon-name="initiative"><IconSwords /></IconBase>
-		<IconBase :width="16" :height="16" icon-name="settings"><IconSettings /></IconBase>
+		<router-link :to="{name: 'Creatures'}">
+			<IconBase :width="24" :height="24" icon-name="creatures"><IconCreature /></IconBase>
+		</router-link>
+		<router-link :to="{name: 'Tracker'}">
+			<IconBase :width="35" :height="35" icon-name="initiative"><IconSwords /></IconBase>
+		</router-link>
+		<router-link :to="{name: 'Settings'}">
+			<IconBase :width="16" :height="16" icon-name="settings"><IconSettings /></IconBase>
+		</router-link>
 	</nav>
 </template>
 
@@ -25,6 +31,6 @@ export default {
 
 <style lang="scss" scoped>
 	.icon{
-		width: 10%;
+		width: 5%;
 	}
 </style>
