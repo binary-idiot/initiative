@@ -87,7 +87,22 @@ body{
 		text-decoration: none;
 	}
 
+	header{
+
+		@media screen and (min-width: 800px),
+			screen and (max-height: 400px){
+			margin-left: 110px
+		}
+
+	}
+
 	main{
 		margin-bottom: 110px;
+
+		@media screen and (min-width: 800px),
+			screen and (max-height: 400px){
+			margin-bottom: 0;
+			margin-left: 110px;
+		}
 	}
 </style>

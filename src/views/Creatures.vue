@@ -45,7 +45,7 @@ export default {
 			'creature-list creature-list creature-list'
 			'creature-details creature-details creature-details';
 
-		@media screen and (min-width: 750px) {
+		@media screen and (min-width: 725px) {
 			grid-template-areas:
 			'creature-list creature-details creature-details';
 		}

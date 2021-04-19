@@ -51,6 +51,13 @@ export default {
 		display: flex;
 		flex-direction: row;
 		align-content: center;
+
+		@media screen and (min-width: 800px),
+			screen and (max-height: 400px){
+			flex-direction: column;
+			height: 100%;
+			width: 100px;
+		}
 		a{
 			color: $contrast-3;
 
