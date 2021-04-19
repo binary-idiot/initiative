@@ -1,8 +1,7 @@
 <template>
 	<nav class="menu-bar">
-		<IconBase :width="24" :height="24" icon-name="creature"><IconCreature /></IconBase>
-		<IconBase class="swords" :width="35" :height="35"
-		icon-name="swords"><IconSwords /></IconBase>
+		<IconBase :width="24" :height="24" icon-name="creatures"><IconCreature /></IconBase>
+		<IconBase :width="35" :height="35" icon-name="initiative"><IconSwords /></IconBase>
 		<IconBase :width="16" :height="16" icon-name="settings"><IconSettings /></IconBase>
 	</nav>
 </template>
