@@ -1,13 +1,22 @@
 <template>
 	<nav class="menu-bar">
 		<router-link :to="{name: 'Creatures'}">
-			<IconBase :width="24" :height="24" icon-name="creatures"><IconCreature /></IconBase>
+			<div>
+				<IconBase :width="24" :height="24" icon-name="creatures"><IconCreature /></IconBase>
+				<span>Creatures</span>
+			</div>
 		</router-link>
 		<router-link :to="{name: 'Tracker'}">
-			<IconBase :width="35" :height="35" icon-name="initiative"><IconSwords /></IconBase>
+			<div>
+				<IconBase :width="35" :height="35" icon-name="initiative"><IconSwords /></IconBase>
+				<span>Tracker</span>
+			</div>
 		</router-link>
 		<router-link :to="{name: 'Settings'}">
-			<IconBase :width="16" :height="16" icon-name="settings"><IconSettings /></IconBase>
+			<div>
+				<IconBase :width="16" :height="16" icon-name="settings"><IconSettings /></IconBase>
+				<span>Settings</span>
+			</div>
 		</router-link>
 	</nav>
 </template>
@@ -30,7 +39,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.icon{
-		width: 5%;
+	.menu-bar{
+		border-top: 3px solid $contrast-1;
+		height: 100px;
+		width: 100%;
+
+		position: fixed;
+		bottom: 0;
+		left: 0;
+
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		a{
+			color: $contrast-3;
+
+			&:hover{
+				color: $contrast-2;
+			}
+
+			margin: auto;
+			padding: 10px;
+			div{
+
+				height: fit-content;
+				.icon{
+					height: 60px;
+				}
+				span{
+					display: inline-block;
+					width: 100%;
+				}
+			}
+		}
+
+		background-color: $contrast-light;
 	}
 </style>

@@ -12,9 +12,9 @@
 		<template v-else>
 			<h2>Content is loading...</h2>
 		</template>
-		<UpdateBar></UpdateBar>
-		<MenuBar></MenuBar>
 	</main>
+	<UpdateBar></UpdateBar>
+	<MenuBar></MenuBar>
 </template>
 
 <script>
@@ -85,5 +85,9 @@ body{
 	a{
 		color: inherit;
 		text-decoration: none;
+	}
+
+	main{
+		margin-bottom: 110px;
 	}
 </style>
