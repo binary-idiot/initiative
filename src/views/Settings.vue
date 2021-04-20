@@ -1,6 +1,7 @@
 <template>
 	<section class="settings-view">
 		<h1>Settings</h1>
+		<h3>Work in progress</h3>
 	</section>
 </template>
 
@@ -12,10 +13,8 @@ export default {
 
 <style lang="scss" scoped>
 	.settings-view{
-		margin: 15px auto;
-		background-color: $background-alt;
-		width: 80%;
-		height: 800px;
-		border: 2px solid $contrast-light;
+		width: 100%;
+		height: max-content;
+		border: 3px solid $contrast-light;
 	}
 </style>
