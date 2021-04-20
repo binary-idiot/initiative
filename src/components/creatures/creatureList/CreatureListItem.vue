@@ -20,9 +20,9 @@ export default {
 <style lang="scss" scoped>
 .creature-list-item{
 	padding: 5px;
-	border: 1px solid black;
+	border: 1px solid $contrast-4;
 	&:hover{
-		background-color: lightblue;
+		background-color: $contrast-light-2
 	}
 
 	a{
