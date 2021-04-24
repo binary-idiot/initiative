@@ -2,7 +2,7 @@ import { createStore } from 'vuex';
 
 export default createStore({
 	state: {
-		entities: [
+		encounter: [
 			{
 				order: 5, name: 'Paul Ross', hp: 50, isCreature: false,
 			},
@@ -15,12 +15,15 @@ export default createStore({
 		],
 	},
 	mutations: {
-		pushEntity(state, entity) {
-			state.entity.push(entity);
+		addEntity(state, entity) {
+			state.encounter.push(entity);
+		},
+		removeEntity(state, index) {
+			state.encounter.splice(index, 1);
 		},
 	},
 	actions: {
-		addEntity({ commit }, e) {
+		saveEntity({ commit }, e) {
 			const entity = {
 				order: e.order,
 				name: e.name,
@@ -28,7 +31,10 @@ export default createStore({
 				isCreature: e.isCreature,
 			};
 
-			commit('pushEntity', entity);
+			commit('addEntity', entity);
+		},
+		deleteEntity({ commit }, index) {
+			commit('removeEntity', index);
 		},
 	},
 });
