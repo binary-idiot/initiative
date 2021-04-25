@@ -14,7 +14,11 @@
 					<td>{{ entity.name }}</td>
 					<td>{{ entity.hp }}</td>
 					<td>
-						<button @click="removeEntityFromEncounter(index)">Delete</button>
+						<button @click="removeEntityFromEncounter(index)">
+							<IconBase icon-name="Delete">
+								<IconTrash />
+							</IconBase>
+						</button>
 					</td>
 				</tr>
 			</tbody>
@@ -23,7 +27,13 @@
 					<td><input type="text" name="order" id="save-entity-order"></td>
 					<td><input type="text" name="name" id="save-entity-name"></td>
 					<td><input type="text" name="hp" id="save-entity-hp"></td>
-					<td><button @click="addEntityToEncounter">Add</button></td>
+					<td>
+						<button @click="addEntityToEncounter">
+							<IconBase icon-name="Add" :width="16" :height="16">
+								<IconPlus />
+							</IconBase>
+						</button>
+					</td>
 				</tr>
 			</tfoot>
 		</table>
@@ -32,9 +42,17 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import IconBase from '@/components/icons/IconBase.vue';
+import IconPlus from '@/components/icons/IconPlus.vue';
+import IconTrash from '@/components/icons/IconTrash.vue';
 
 export default {
 	name: 'TrackerList',
+	components: {
+		IconBase,
+		IconPlus,
+		IconTrash,
+	},
 	computed: {
 		...mapState({
 			entities: (state) => state.encounter.sort((a, b) => a.order - b.order),
@@ -68,6 +86,16 @@ export default {
 
 			td{
 				padding: 2px 10px;
+				button{
+					padding: 0;
+					margin: 0;
+					height: 25px;
+					.icon{
+						width: 20px;
+						height: 20px;
+						margin: 0;
+					}
+				}
 			}
 		}
 	}
