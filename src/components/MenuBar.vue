@@ -88,6 +88,7 @@ export default {
 
 		@media screen and (min-width: 800px),
 			screen and (max-height: 400px){
+			border-right: 3px solid $contrast-1;
 			flex-direction: column;
 			height: 100%;
 			width: 100px;
