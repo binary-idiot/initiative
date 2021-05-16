@@ -3,30 +3,26 @@
 		<h1>Initiative Tracker</h1>
 
 		<TrackerList></TrackerList>
-		<button @click="modalOpen = true">Add Player</button>
+		<button @click="openModal()">Add Player</button>
 	</section>
 
-	<ModalContainer :modalOpen="modalOpen">
-		<TrackerAddModal @closeModal="modalOpen = false"></TrackerAddModal>
-	</ModalContainer>
+	<TrackerAddModal></TrackerAddModal>
 </template>
 
 <script>
 import TrackerList from '@/components/tracker/TrackerList.vue';
 import TrackerAddModal from '@/components/tracker/TrackerAddModal.vue';
-import ModalContainer from '@/components/ModalContainer.vue';
 
 export default {
 	name: 'Tracker',
 	components: {
 		TrackerList,
 		TrackerAddModal,
-		ModalContainer,
 	},
-	data() {
-		return {
-			modalOpen: false,
-		};
+	methods: {
+		openModal() {
+			this.$store.dispatch('openModal', 'TrackerAddModal');
+		},
 	},
 };
 </script>

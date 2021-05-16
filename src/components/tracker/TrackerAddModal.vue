@@ -1,6 +1,7 @@
 <template>
-	<div class="tracker-add-modal">
-		<h3>Add Player</h3>
+	<ModalSubmit :modalName="modalName"
+		title="Add Player" submitText="Add Player"
+		@submitModal="addEntityToEncounter()" @closeModal="closeModal()">
 		<form>
 			<div class="order formInput">
 				<label for="order">Order</label>
@@ -15,18 +16,12 @@
 				<input type="text" name="hp" v-model="hp">
 			</div>
 		</form>
-		<button @click="closeModal" class="closeButton">
-			Close
-		</button>
-		<button @click="addEntityToEncounter" class="addButton">
-			Add Entity
-		</button>
-	</div>
+	</ModalSubmit>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
-import modalHelper from '@/mixins/modalHelper';
+import ModalSubmit from '@/components/ModalSubmit.vue';
 
 export default {
 	name: 'TrackerAddModal',
@@ -35,7 +30,11 @@ export default {
 			order: '',
 			name: '',
 			hp: '',
+			modalName: 'TrackerAddModal',
 		};
+	},
+	components: {
+		ModalSubmit,
 	},
 	methods: {
 		addEntityToEncounter() {
@@ -50,20 +49,14 @@ export default {
 		},
 		...mapActions([
 			'saveEntity',
+			'closeModal',
 		]),
 	},
-	mixins: [modalHelper],
 };
 </script>
 
 <style lang="scss" scoped>
-	.tracker-add-modal{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-
-		h3{
-			grid-column: 1 / span 3;
-		}
+	.TrackerAddModal{
 
 		form{
 			grid-column: 1 / span 3;
@@ -77,18 +70,6 @@ export default {
 				flex-direction: column;
 				padding: 5px;
 			}
-		}
-
-		button{
-			margin-top: 10px;
-		}
-
-		.closeButton{
-			grid-column: 1 / span 1;
-		}
-
-		.addButton{
-			grid-column: 3 / span 1;
 		}
 	}
 </style>

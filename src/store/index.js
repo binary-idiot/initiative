@@ -3,6 +3,10 @@ import { createStore } from 'vuex';
 export default createStore({
 	state: {
 		encounter: [],
+		activeModal: '',
+	},
+	getters: {
+		isActiveModal: (state) => (modal) => modal === state.activeModal,
 	},
 	mutations: {
 		addEntity(state, entity) {
@@ -10,6 +14,9 @@ export default createStore({
 		},
 		removeEntity(state, index) {
 			state.encounter.splice(index, 1);
+		},
+		changeModal(state, modal) {
+			state.activeModal = modal;
 		},
 	},
 	actions: {
@@ -25,6 +32,12 @@ export default createStore({
 		},
 		deleteEntity({ commit }, index) {
 			commit('removeEntity', index);
+		},
+		openModal({ commit }, modal) {
+			commit('changeModal', modal);
+		},
+		closeModal({ commit }) {
+			commit('changeModal', '');
 		},
 	},
 });
