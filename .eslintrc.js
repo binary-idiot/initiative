@@ -18,6 +18,13 @@ module.exports = {
 		'prefer-destructuring': ['error', { object: true, array: false }],
 		indent: ['error', 'tab'],
 		'no-tabs': ['error', { allowIndentationTabs: true }],
+		"object-curly-newline": ["error", {
+			"ObjectExpression": "always",
+			"ObjectPattern": { "multiline": true },
+			"ImportDeclaration": "never",
+			"ExportDeclaration": { "multiline": true}
+		}],
+	
 	},
 	overrides: [
 		{
