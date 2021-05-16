@@ -5,7 +5,7 @@
 		<form>
 			<div class="order formInput">
 				<label for="order">Order</label>
-				<input type="text" name="order" v-model="order">
+				<input type="number" name="order" v-model="order">
 			</div>
 			<div class="name formInput">
 				<label for="name">Name</label>
@@ -13,7 +13,11 @@
 			</div>
 			<div class="hp formInput">
 				<label for="hp">HP</label>
-				<input type="text" name="hp" v-model="hp">
+				<input type="number" name="hp" v-model="hp">
+			</div>
+			<div class="ac formInput">
+				<label for="ac">AC</label>
+				<input type="number" name="ac" v-model="ac">
 			</div>
 		</form>
 	</ModalSubmit>
@@ -27,9 +31,10 @@ export default {
 	name: 'TrackerAddModal',
 	data() {
 		return {
-			order: '',
+			order: 0,
 			name: '',
-			hp: '',
+			hp: 0,
+			ac: 0,
 			modalName: 'TrackerAddModal',
 		};
 	},
@@ -38,14 +43,15 @@ export default {
 	},
 	methods: {
 		addEntityToEncounter() {
-			const { order, name, hp } = this;
+			const { order, name, hp, ac } = this;
 			this.saveEntity({
-				order, name, hp,
+				order, name, hp, ac,
 			});
 			this.closeModal();
-			this.order = '';
+			this.order = 0;
 			this.name = '';
-			this.hp = '';
+			this.hp = 0;
+			this.ac = 0;
 		},
 		...mapActions([
 			'saveEntity',
@@ -59,16 +65,20 @@ export default {
 	.TrackerAddModal{
 
 		form{
-			grid-column: 1 / span 3;
-			display: flex;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-auto-rows: 1fr 1fr;
 
-			@media screen and (orientation: portrait) {
-				flex-direction: column;
-			}
 			.formInput{
 				display: flex;
 				flex-direction: column;
 				padding: 5px;
+				width: 25%;
+			}
+
+			.name{
+				width: 75%;
+				grid-column: 2 / span 2;
 			}
 		}
 	}

@@ -6,6 +6,7 @@
 					<th>Order</th>
 					<th>Name</th>
 					<th>HP</th>
+					<th>AC</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -13,6 +14,7 @@
 					<td>{{ entity.order }}</td>
 					<td>{{ entity.name }}</td>
 					<td>{{ entity.hp }}</td>
+					<td>{{ entity.ac }}</td>
 					<td>
 						<button @click="removeEntityFromEncounter(index)">
 							<IconBase icon-name="Delete">
@@ -27,7 +29,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import IconBase from '@/components/icons/IconBase.vue';
 import IconTrash from '@/components/icons/IconTrash.vue';
 
@@ -38,8 +40,8 @@ export default {
 		IconTrash,
 	},
 	computed: {
-		...mapState({
-			entities: (state) => state.encounter.sort((a, b) => a.order - b.order),
+		...mapGetters({
+			entities: 'orderedEncounter',
 		}),
 	},
 	methods: {

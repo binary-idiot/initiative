@@ -6,6 +6,8 @@ export default createStore({
 		activeModal: '',
 	},
 	getters: {
+		orderedEncounter: (state) => state.encounter.sort((a, b) => a.order - b.order),
+
 		isActiveModal: (state) => (modal) => modal === state.activeModal,
 	},
 	mutations: {
@@ -25,6 +27,7 @@ export default createStore({
 				order: e.order,
 				name: e.name,
 				hp: e.hp,
+				ac: e.ac,
 				isCreature: e.isCreature,
 			};
 
