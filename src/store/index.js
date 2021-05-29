@@ -2,17 +2,13 @@ import { createStore } from 'vuex';
 
 export default createStore({
 	state: {
-		encounter: [
-			{
-				order: 5, name: 'Paul Ross', hp: 50, isCreature: false,
-			},
-			{
-				order: 2, name: 'Raul Poss', hp: 100, isCreature: false,
-			},
-			{
-				order: 8, name: 'QT Pie', hp: 70, isCreature: false,
-			},
-		],
+		encounter: [],
+		activeModal: '',
+	},
+	getters: {
+		orderedEncounter: (state) => state.encounter.sort((a, b) => a.order - b.order),
+
+		isActiveModal: (state) => (modal) => modal === state.activeModal,
 	},
 	mutations: {
 		addEntity(state, entity) {
@@ -21,6 +17,9 @@ export default createStore({
 		removeEntity(state, index) {
 			state.encounter.splice(index, 1);
 		},
+		changeModal(state, modal) {
+			state.activeModal = modal;
+		},
 	},
 	actions: {
 		saveEntity({ commit }, e) {
@@ -28,6 +27,7 @@ export default createStore({
 				order: e.order,
 				name: e.name,
 				hp: e.hp,
+				ac: e.ac,
 				isCreature: e.isCreature,
 			};
 
@@ -35,6 +35,12 @@ export default createStore({
 		},
 		deleteEntity({ commit }, index) {
 			commit('removeEntity', index);
+		},
+		openModal({ commit }, modal) {
+			commit('changeModal', modal);
+		},
+		closeModal({ commit }) {
+			commit('changeModal', '');
 		},
 	},
 });
