@@ -1,5 +1,5 @@
 # Initiative
-Mobile friendly [initiative tracker](https://initiative.jonahmiddleton.com/) for 5th edition dungeons and dragons
+Mobile friendly [initiative tracker](https://initiative.ac) for 5th edition dungeons and dragons
 
 Project is intended to be a mobile friendly initiative tracker web app.
 Planned features include
