@@ -1,6 +1,8 @@
 # Initiative
 Mobile friendly [initiative tracker](https://initiative.ac) for 5th edition dungeons and dragons
 
+***Project is being replaced by [this project](https://github.com/binary-idiot/InitiativeApp) with the intention of being more generic / system agnostic***
+
 Project is intended to be a mobile friendly initiative tracker web app.
 Planned features include
 - Fully featured initative tracker with contition and hp tracking
